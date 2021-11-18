@@ -11,6 +11,14 @@ $color-accent: #FA6980;
     margin: 0 auto;
 }
 
+
+@mixin flex($j:space-between) {
+    display: flex;
+    justify-content: $j;
+}
+
+
+
 body {
     color: $color-text;
     font-size: 14px;
@@ -30,6 +38,18 @@ li {
 
 // BLOCK-------------------
 
+.morenews {
+    &__inner {
+        @include inner();
+    }
+
+    &__list {
+        @include flex();
+    }
+}
+
+
+
 .title-main {
     margin-bottom: 30px;
     padding-bottom: 30px;
@@ -44,5 +64,45 @@ li {
 
     &__inner {
         @include inner();
+    }
+
+    &__list {
+        @include flex();
+    }
+}
+
+.card {
+    &__title {
+        font-size: 18px;
+        color: $color-heading;
+        margin-left: 35px;
+        margin-right: 168px;
+        margin-top: 27px;
+    }
+
+    &__text {
+        margin-top: 10px;
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+
+    &__boby {
+        background-color: #FFFFFF;
+    }
+
+    .btn {
+        display: block;
+        width: 160px;
+        margin-top: 30px;
+        margin-bottom: 35px;
+        margin-left: 165px;
+        margin-right: 35px;
+        padding: 10px 0;
+        background: $color-accent;
+        color: #FFFFFF;
+        font-size: 12px;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
     }
 }
